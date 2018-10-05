@@ -35,16 +35,7 @@ def convert_to_dict(query_result, label):
     for record in query_result:
         data.append({'date': record[0], label: record[1]})
     return data
-
-
-def get_most_recent_date():
-    year_today = datetime.date(2017,8,20)
-    year_ago = year_today - datetime.timedelta(days=365)
-
-    for date in recent_date:
-        most_recent_date = date.date
-
-    return dt.datetime.strptime(most_recent_date, "%Y-%m-%d")
+    
 
 @app.route("/")
 def welcome():
